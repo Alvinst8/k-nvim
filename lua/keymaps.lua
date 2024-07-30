@@ -46,3 +46,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- vim: ts=2 sts=2 sw=2 et
+
+-- Changeing buffer
+vim.keymap.set('n', '<leader>l', ':bnext<CR>', { desc = 'Switch to Next buffer' })
+vim.keymap.set('n', '<leader>h', ':bprevious<CR>', { desc = 'Switch to Previous buffer' })
+vim.keymap.set('n', '<leader>bd', ':bd<CR>', { desc = 'Delete Current Buffer' })
+vim.keymap.set('n', '<leader>b!', ':bd!<CR>', { desc = 'Force Delete Current Buffer' })
+
+-- Yanking into clipboard
+vim.keymap.set('v', '<leader>y', [["+y]], { desc = 'Yanking into Clipboard' })
